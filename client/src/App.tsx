@@ -1,10 +1,11 @@
 import React from "react"
+import LongPulling from "./components/LongPulling"
 
 function App() {
   return (
-    <div>
-
-    </div>
+    <>
+     <LongPulling />
+    </>
   )
 }
 
