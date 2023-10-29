@@ -1,12 +1,13 @@
-import React, {ChangeEvent, useState} from "react"
+import React, {ChangeEvent, useId, useState} from "react"
 import axios from "../api"
 
 const LongPulling = () => {
     const [messages, setMessages] = useState<[]>([])
     const [value, setValue] = useState<string>("")
+    const messageId: string = useId()
 
     const sendMessage: () => Promise<[]> = async () => {
-        const response = await axios.post("")
+        const response = await axios.post("/api/v1/message", {message: value, id: messageId})
         return []
     }
 
